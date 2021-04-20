@@ -10,8 +10,10 @@
     <title>H.Yang</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <!--adobe Minion字體-->
     <link rel="stylesheet" href="https://use.typekit.net/agd0wqc.css">
+    <script src="js/lightbox.js"></script>
 </head>
 
 <body>
@@ -178,13 +180,19 @@
 
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img class="img-responsive" src="./img/UI_connect1.png" alt="">
+                                <a href="./img/UI_connect1.png" data-lightbox="image-set">
+                                    <img class="img-responsive img-lightbox" src="./img/UI_connect1.png" alt="">
+                                </a>
                             </div>
                             <div class="item">
-                                <img class="img-responsive" src="./img/UI_connect2.png" alt="">
+                                <a href="./img/UI_connect2.png" data-lightbox="image-set">
+                                    <img class="img-responsive img-lightbox" src="./img/UI_connect2.png" alt="">
+                                </a>
                             </div>
                             <div class="item">
-                                <img class="img-responsive" src="./img/UI_connect3.png" alt="">
+                                <a href="./img/UI_connect3.png" data-lightbox="image-set">
+                                    <img class="img-responsive img-lightbox" src="./img/UI_connect3.png" alt="">
+                                </a>
                             </div>
                         </div>
                         <!--左右滑動-->
@@ -203,7 +211,7 @@
                     <h3 class="didot-font  margin-bot-20">Connected (2020)</h3>
                     <p class="font-14 minion-font margin-bot-20"><a href="https://www.figma.com/proto/pMoA0fX1Fn7lKafD4VtEg6/prototype?node-id=61%3A2&scaling=scale-down" class="text-underline didot-font italic">Connected</a> is a mobile app aiming to link & strengthen daily connections between <span class="didot-font italic">family members</span> who are separated by the pandemic or other realistic factors. With spatial distance narrowed by human-centred design, emotional needs can be better conveyed, so that family could serve as a gentle net to stretch and embrace its members who are far away facing the epidemic alone in this hard year.
                         <br>
-                        <br> <span class="bold">UX / UI</span>:&nbsp; Hong Yang, Celine, Corlyn, Kao YiYong
+                        <br> <span class="bold">UX / UI</span>:&nbsp; Hong Yang(mainly), Celine, Corlyn, Kao YiYong
                         <br> <span class="bold">Website:</span>&nbsp; Hong Yang</p>
                     <a href="https://hongyang0326.wixsite.com/mysite"><input class="m-btn btn btn-default" type="submit" value="Visit Portfolio Website"></a>
                 </div>
@@ -390,10 +398,11 @@
             <div class="ol-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 
                 <h3 class="title didot-font font-30" style="margin-left: -10px;">V&thinsp;I&thinsp;D&thinsp;E&thinsp;O&thinsp;S</h3>
-                <video style="border: 1px solid #fff;" src="./img/documentary.mov" controls></video>
+<!--                 <video style="border: 1px solid #fff;" src="https://drive.google.com/file/d/1PQHE4eAat7ZiHgZgmdFu0VNBSdGB19UK/view?usp=sharing" controls></video>
+ -->                <iframe style="border: 1px solid #fff; margin-bottom: 40px;" width="630" height="525" src="https://www.youtube.com/embed/19BMMTSxkv4" title="YouTube video player"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                 <div>
-                <p class="minion-font font-14>
-                    <a href="https://docs.google.com/document/d/1oBZr7V9KqDwNQ9ouEXA1oWTEBDsUMryfR6tj1mxm9Q0/edit?usp=sharing" class="text-underline italic didot-font blue-font">Poem of Winds (2020)</a>
+                <p class="minion-font font-14">
+                    <a href="https://docs.google.com/document/d/1oBZr7V9KqDwNQ9ouEXA1oWTEBDsUMryfR6tj1mxm9Q0/edit?usp=sharing" class="text-underline italic didot-font blue-font">The Poem of Winds (2020) </a>
                     is a small documentary commemorating the 10th anniversary of Chinese Mainland students being allowed to come to Taiwan for degrees. Interrupted by the pandemic, the permit has been canceled temporarily or maybe permanently.
                 </p>
                 <p class="minion-font font-14">We' re generally called<span class="didot-font italic white-font">&thinsp; Mainland Students</span> in Taiwan. If someone want a poetic image or any metaphor to better describe us , it can be <span class="italic didot-font white-font">&thinsp;the wind</span>, which may derive from Chinese writer Han Han's famous article 
@@ -442,8 +451,9 @@
     <div id="articlesContainer" class="fade-box">
         <div class="container">
             <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-
-                <h3 class="title col-md-12 col-lg-12 didot-font font-30 margin-bot-30">A&thinsp;R&thinsp;T&thinsp;I&thinsp;C&thinsp;L&thinsp;E&thinsp;S</h3>
+                <div class="margin-bot-20">
+                    <h3 class="title col-md-12 col-lg-12 didot-font font-30">A&thinsp;R&thinsp;T&thinsp;I&thinsp;C&thinsp;L&thinsp;E&thinsp;S</h3>
+                </div>
                 <div class="article-item col-md-6 col-lg-6">
                     <span class="italic didot-font font-14">02/10/2020</span>
                     <h4 class=" didot-font font-25">Memory of the Pandemic</h4>
@@ -486,52 +496,56 @@
 <!--skills-->
     <div id="skillsContainer" class="fade-box">
         <div class="container">
-            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-                <h3 class="col-md-4 col-lg-4 didot-font font-30">S&thinsp;K&thinsp;I&thinsp;L&thinsp;L&thinsp;S</h3>
+            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 margin-bot-20">
+                <h3 class="col-md-4 col-lg-4 didot-font font-30 ">S&thinsp;K&thinsp;I&thinsp;L&thinsp;L&thinsp;S</h3>
             </div>
 
             <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
 
                 <div class="skill-list">
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill1.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill1.png" alt="">
                         <p class="minion-font font-18">Figma</p>
                     </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill2.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill2.png" alt="">
                         <p class="minion-font font-18">Illustrator</p>
                     </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill3.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill3.png" alt="">
                         <p class="minion-font font-18">Photoshop</p>
                     </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill4.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill4.png" alt="">
                         <p class="minion-font font-18">Premiere</p>
                     </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill8.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill8.png" alt="">
                         <p class="minion-font font-18">Audition</p>
                     </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill5.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill5.png" alt="">
                         <p class="minion-font font-18">FCP</p>
                     </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill6.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill6.png" alt="">
                         <p class="minion-font font-18">Motion</p>
                     </div>
+                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill9.png" alt="">
+                        <p class="minion-font font-18">Flash</p>
+                    </div>
                     <div class="skill-item col-xs-4 col-sm-3 col-md-2 col-lg-1">
-                        <img class="m-img img-responsive img-thumbnail center-block" src="./img/skill7.png" alt="">
+                        <img class="img-responsive img-thumbnail center-block" src="./img/skill7.png" alt="">
                         <p class="minion-font font-18">Slack</p>
                     </div>
                      
                 </div>
                 <div class="skill-desc">
                     <ul class="container minion-font font-14 a">
-                        <li class="col-md-6 col-lg-4 col-lg-offset-0">Competent to carry out UI design</li>
+                        <li class="col-md-6 col-lg-4 col-lg-offset-0">Competent in UI design & Basic Web Design</li>
                         <li class="col-md-6 col-lg-4 col-lg-offset-2">Familiar with the IOS and Andrroid system</li>
-                        <li class="col-md-6 col-lg-4 col-lg-offset-0">Experience in working in groups</li>
+                        <li class="col-md-6 col-lg-4 col-lg-offset-0">Play an active role in teamwork</li>
                         <li class="col-md-6 col-lg-4 col-lg-offset-2">Capable of making high-fidelity Prototype</li>
                     </ul>
                 </div>
