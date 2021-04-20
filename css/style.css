@@ -287,9 +287,9 @@ body {
     background-color: #000;
     color: #fff;
 }
-#videosContainer video {
+#videosContainer iframe {
     width: 100%;
-    object-fit: fill;
+    object-fit: fill; /*自適應螢幕大小*/
     margin-bottom: 50px;
 }
 #videosContainer .video-content-text {
@@ -553,3 +553,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
 }   
+
+/*Float CLear*/
+.clear:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
