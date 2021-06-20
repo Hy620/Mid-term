@@ -591,9 +591,9 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1" class=" didot-font font-20">Message</label>
-                    <textarea class="form-control" rows="6"></textarea>
+                    <textarea class="form-control" id="textareaContent" rows="6"></textarea>
                 </div>
-                <input class="btn btn-default fromSubmitBtn shareBtn" type="submit" value="Send">
+                <button class="m-btn btn-default shareBtn" style="cursor: pointer;">Send</button>
             </form>
         </div>
     </div>
@@ -624,7 +624,9 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>
-        $(function () {
+
+
+    $(function () {
     // jquery在DOM載入後執行 function(){...}
         //上下滚动时隐藏导航栏
         var p = 0, t = 0; 
@@ -639,37 +641,45 @@
             }
             t = p;//更新上一次的scroll值
         })
-        
+
         //刷新回到頂部
         $('html,body').animate({
             scrollTop: 0
         }, 0);
 
-        //flowup
-        $(function () {
-            $('.m-img').click(function (e) {
-                var url = e.currentTarget.attributes['src'].value
-                imgZoomIn(url)
-            })
-            console.log($(window).height())
-
-            $("body").flowUp(".fade-box", { transalteY: 350, duration: 1 });
-            //漢堡選單
-            $('#collapse a').click(function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var $target = $(this.hash);
-                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-                    if ($target.length) {
-                        var targetOffset = $target.offset().top - 50;
-                        $('html,body').animate({
-                            scrollTop: targetOffset
-                        },
-                            1000);
-                        return false;
-                    }
+        //漢堡選單
+        $('#collapse a').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top - 50;
+                    $('html,body').animate({
+                        scrollTop: targetOffset
+                    },
+                        1000);
+                    return false;
                 }
-            });
+            }
+        });
+
+        // 點擊分享按鈕，清除文本框內容，顯示發送成功
+        $('.shareBtn').click(function () {
+             $('#firstName,#laseName,#exampleInputEmail1,#textareaContent').val('')
+             swal("Sent", "感謝回饋", "success");
         })
+    })
+
+    //flowup
+    $(function () {
+        $('.m-img').click(function (e) {
+            var url = e.currentTarget.attributes['src'].value
+            imgZoomIn(url)
+        })
+        console.log($(window).height())
+
+        $("body").flowUp(".fade-box", { transalteY: 350, duration: 1 });
+    })
 
         //點擊放大圖片
         function imgZoomIn(src) {
@@ -681,19 +691,11 @@
 
         //滾動視差
         var image = document.getElementsByClassName('parallax');
+        
         new simpleParallax(image, {
          delay: .6,
         transition: 'cubic-bezier(0,0,0,1)'
         });
-
-       // 點擊分享按鈕，清除文本框內容，顯示發送成功
-        $('.shareBtn').click(function () {
-             $('#inputEmail,#inputName,#inputLastName,#textareaContent').val('')
-             swal("Sent", "感謝回饋", "success");
-        })
-
-
-        })
     </script>
 </body>
 
